@@ -8,7 +8,7 @@ public class DataFile {
 	private String defineSetDat = "#【此行为注释】参数配置文件，特别重要！请勿擅自删改！！！\n" + 
 			"#【此行为注释】下面是软件的设计开发公司名称及电话\n" + 
 			"@设计：深圳市智锐科技有限公司 电话：13691645742 (Design:ZRKJ Call:13691645742)\n" + 
-			"#【此行为注释】下面是\n   ";
+			"#【此行为注释】下面是\n   尝试1111";
 	public DataFile() {	//获取配置文件中的信息
 		java.io.File file = new java.io.File("set.dat");
 		if(file.exists() == false) {
