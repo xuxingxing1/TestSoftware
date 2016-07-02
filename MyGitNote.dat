@@ -1,0 +1,52 @@
+一、git 是什么？
+	git是目前世界上最先进的分布式版本控制系统
+
+二、如何在windows上安装git？
+	msysgit 是windows版本的git
+	下载后安装msysgitGit_xxxxxx.exe
+	在开始菜单中找到Git --> Git Bash
+	运行即可看到git的命令行界面
+
+三、设置git 的用户名和邮箱
+
+	输入命令$ git config --global user.name "xuxingxing"
+
+	输入命令$ git config --global user.email "1193060491@qq.com"
+
+四、创建版本库和第一次提交
+
+	先在硬盘中创建一个文件夹例如/home/xuxingxing/workspace/TestSoftware
+	这个文件夹下原先是我的java练习目录
+	目录中有:文件夹bin;文件夹src……等文件
+
+	输入命令$ cd /home/xuxingxing/workspace/TestSoftware
+
+	输入命令$ git init
+	将这个目录变成一个本地化的git仓库
+
+	输入命令S git add .
+	将这个文件夹下的全部文件夹和文件都加载到仓库暂存区中
+
+	输入命令$ git commit -m "这个文件夹的第一次提交！"
+	将暂存区中的内容正式提交到仓库中，并且填写版本注释
+
+	输入命令$ git status
+	查看现在是否提交完成
+
+五、提交修改过的代码
+
+	修改TestSoftware/src/zrkj/DataFile.java 文件
+	
+	输入命令$ git status
+	查看是否有文件未提交
+	结果肯定是提示有文件被修改
+
+	输入命令$ git diff src/zrkj/DataFile.java
+	查看修改的内容
+
+	输入命令$ git add src/zrkj/DataFile.java
+	将修改过的文件提交到仓库暂存区
+
+	输入命令S git commit -m "这次是修改了DataFile.java文件"
+	正式提交到仓库中，并填写版本注释
+	
