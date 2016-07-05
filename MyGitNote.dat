@@ -74,7 +74,8 @@
 	则可以回退到任意一个版本
 
 八、撤销当前修改
-	编辑完代码后，如果不想保留这次编辑，要恢复到上一个版本，即撤销这次编辑。	我们有3种方法。
+	编辑完代码后，如果不想保留这次编辑，要恢复到上一个版本，
+	即撤销这次编辑。我们有3种方法。
 	1、修改代码文件。直接删除掉这次编辑的内容，恢复到未编辑过的状态
 	2、使用命令 git reset --hard HEAD^ 回退到上一个版本
 	3、输入命令$ git status 查看这次编辑过的文件
@@ -102,4 +103,25 @@
 	则生成了SSH Key，在主目录下会生成上面说的文件夹和文件
 	其中id_rsa是私钥，id_rsa.pub是公钥，公钥可以告诉别人。
 
-	10.2、
+	10.2、登陆github，创建一个空的仓库
+	登陆github.com网站，根据提示注册账号，并建立一个新的在线仓库。
+	例如：我创建的仓库名称为xuxingxing1/TestSoftware.git
+	打开“settings”中的Deploy Keys页面，
+	然后点击“Add deploy Key”，填写上任意的title，在Key文本框里
+	粘贴id_rsa.pub的内容。Allow write access打钩，再点击add key
+
+	10.3、第一次同步本地代码到云端
+	点击<>code，进入代码管理界面。根据提示，选择提交一个已经存在的仓库。
+	输入代码$ git remote add origin git@github.com:xuxingxing1/TestSoftware.git
+	输入代码$ git push -u origin master
+	推送成功后，可以立刻在github页面上看到和本地一模一样的库了
+	此时真正的在线分布式版本库已经建立了。
+
+	10.4、向github推送最新修改的内容
+	输入命令$ git push origin master
+	即可将当前本地的最新修改推送到github上
+
+	10.5、新员工从github克隆到本地库
+	输入命令$ git clone git@github.com:xuxingxing1/TestSoftware.git
+
+十一、创建与合并分支
