@@ -125,3 +125,18 @@
 	输入命令$ git clone git@github.com:xuxingxing1/TestSoftware.git
 
 十一、创建与合并分支
+
+	11.1创建并切换分支
+	输入命令$ git checkout -b testsql
+	即可创建并切换到testsql分支
+
+	输入命令$ git branch
+	查看分支
+
+	单独的分离命令如下
+	查看分支：git branch
+	创建分支：git branch testsql  (testsql是分支名称)
+	切换分支：git checkout testsql  (testsql是分支名称)
+	创建+切换分支：git checkout -b testsql  (testsql是分支名称)
+	合并某分支到当前分支：git merge testsql  (testsql是分支名称)
+	删除分支：git branch -d testsql  (testsql是分支名称)
